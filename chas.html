@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f6ef"><title>Chás & infusões | Magnolia's Garden</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"><link rel="stylesheet" href="style.css">
+</head>
+<body data-page="category" data-category="chas">
+  <div class="announcement">Pequenos encantos para deixar a casa com a sua cara <span>✿</span></div>
+  <header class="site-header"><div class="nav-container">
+    <button class="icon-button mobile-toggle" id="mobile-toggle" aria-label="Abrir menu" aria-expanded="false"><i class="bx bx-menu"></i></button>
+    <a class="logo" href="index.html">Magnolia's <span>Garden</span></a>
+    <nav class="main-nav" id="nav-menu" aria-label="Navegação principal"><a href="index.html">Início</a><a href="velas.html">Velas</a><a href="chas.html">Chás</a><a href="decoracao.html">Decoração</a><a href="vintage.html">Vintage</a></nav>
+    <div class="nav-actions"><button class="icon-button" id="search-toggle" aria-label="Abrir busca"><i class="bx bx-search"></i></button><button class="icon-button cart-trigger" data-open-cart aria-label="Abrir carrinho"><i class="bx bx-shopping-bag"></i><span class="cart-count" id="cart-count">0</span></button></div>
+  </div><form class="search-bar" id="search-form" role="search"><input id="search-input" type="search" placeholder="O que você está procurando?" aria-label="Buscar produtos"><button type="submit">Buscar</button></form></header>
+  <main class="category-page">
+    <section class="category-hero"><span class="eyebrow">MAGNOLIA'S GARDEN / COLEÇÃO</span><h1 id="category-title">Nossa coleção</h1><p id="category-description">Pequenos encantos escolhidos para você.</p></section>
+    <section class="section shop-section category-shop">
+      <div class="section-heading section-heading-row"><div><span class="eyebrow">ESCOLHIDOS COM CARINHO</span><h2 id="category-heading">Descubra a coleção</h2></div><a class="text-link" href="index.html#colecao"><i class="bx bx-left-arrow-alt"></i> Voltar ao início</a></div>
+      <div class="catalog-toolbar"><label class="catalog-search"><i class="bx bx-search"></i><input type="search" id="catalog-search" placeholder="Buscar nesta categoria..." aria-label="Buscar nesta categoria"></label><select id="sort-select" aria-label="Ordenar produtos"><option value="featured">Em destaque</option><option value="newest">Mais recentes</option><option value="price-asc">Menor preço</option><option value="price-desc">Maior preço</option><option value="name">Nome A–Z</option></select></div>
+      <div class="catalog-layout"><aside class="filters"><div class="filter-heading"><h3>Refinar busca</h3><button id="clear-filters" class="clear-button">Limpar</button></div><div class="filter-group"><h4>Faixa de preço</h4><label><input type="checkbox" name="price" value="0-50"> Até R$ 50</label><label><input type="checkbox" name="price" value="50-150"> R$ 50 a R$ 150</label><label><input type="checkbox" name="price" value="150-9999"> Acima de R$ 150</label></div></aside><div class="products-area"><div class="results-line"><span id="results-count" aria-live="polite"></span><span>Valores em reais (R$)</span></div><div class="products-grid" id="products-grid"></div><div class="empty-state" id="empty-state" hidden><i class="bx bx-leaf"></i><h3>Essa coleção está florescendo...</h3><p>Ainda não há produtos cadastrados nesta categoria. Volte em breve para descobrir novidades.</p><a class="button button-outline" href="index.html">Explorar a loja</a></div></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-main"><div class="footer-brand"><a class="logo" href="index.html">Magnolia's <span>Garden</span></a><p>Pequenos detalhes para uma casa acolhedora.</p></div><div><h3>Explore</h3><a href="velas.html">Velas aromáticas</a><a href="chas.html">Chás & infusões</a><a href="decoracao.html">Decoração</a><a href="vintage.html">Vintage</a></div><div><h3>Atendimento</h3><a href="index.html#newsletter">Fale com a gente</a><a href="#">Envios e entregas</a><a href="#">Privacidade</a></div><div><h3>Um lembrete</h3><p>Seu lar merece ser um lugar onde você gosta de estar.</p><span class="footer-flower">✿</span></div></div><div class="footer-bottom"><span>© <span id="current-year"></span> Magnolia's Garden.</span><span>Feito com <i class="bx bxs-heart"></i> e inspiração.</span></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div><div class="drawer-backdrop" id="cart-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Carrinho de compras" aria-hidden="true"><div class="drawer-header"><div><span class="eyebrow">SUA SELEÇÃO</span><h2>Meu carrinho</h2></div><button class="icon-button" id="close-cart" aria-label="Fechar carrinho"><i class="bx bx-x"></i></button></div><div class="cart-items" id="cart-items"></div><div class="cart-empty" id="cart-empty"><i class="bx bx-shopping-bag"></i><h3>Seu jardim está vazio</h3><p>Que tal encontrar algo especial?</p><button class="button button-outline" id="continue-shopping">Continuar explorando</button></div><div class="drawer-footer" id="drawer-footer"><div class="subtotal"><span>Subtotal</span><strong id="cart-total">R$ 0,00</strong></div><p>Frete e condições de pagamento são definidos na etapa de compra.</p><button class="button button-primary checkout-demo" id="checkout-button">Continuar <i class="bx bx-right-arrow-alt"></i></button><small>Checkout demonstrativo — configure seu meio de pagamento antes de publicar a loja.</small></div></aside>
+  <script src="app.js"></script>
+</body></html>
